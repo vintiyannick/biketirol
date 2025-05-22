@@ -79,5 +79,12 @@ const controlElevation = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
+    slope: true,
 }).addTo(map);
 controlElevation.load("data/etappe18.gpx");
+
+// Minimap 
+var gktirol = new L.TileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png");
+var miniMap = new L.Control.MiniMap(gktirol, {
+    toggleDisplay: true
+}).addTo(map);
