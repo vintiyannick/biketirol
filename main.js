@@ -83,8 +83,14 @@ const controlElevation = L.control.elevation({
 }).addTo(map);
 controlElevation.load("data/etappe18.gpx");
 
-// Minimap 
+// Minimap Plugin mit Grundkarte Tirol Sommer als Layer
 var gktirol = new L.TileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png");
 var miniMap = new L.Control.MiniMap(gktirol, {
     toggleDisplay: true
 }).addTo(map);
+
+// Fullscreen Leaflet Plugin
+map.addControl(new L.Control.Fullscreen());
+// oder
+//const fullScreenControl = L.control.fullscreen();
+//fullScreenControl.addTo(map);
