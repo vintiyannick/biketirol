@@ -51,3 +51,11 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
+// Etappennavigation über Pulldownmenü
+console.log(ETAPPEN);
+for (let etappe of ETAPPEN) {
+    console.log(etappe);
+    console.log(etappe.user);
+    console.log(etappe.nr);
+    console.log(etappe.titel);
+}
