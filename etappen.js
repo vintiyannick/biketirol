@@ -1,4 +1,4 @@
-const Etappen= [
+const ETAPPEN= [
  {
    "user": "fritzcrone",
    "nr": 6,
